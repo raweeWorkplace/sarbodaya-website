@@ -1,9 +1,15 @@
 package in.edu.sarbodaya.controller;
 
+import java.nio.charset.Charset;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,16 +19,23 @@ import org.springframework.web.servlet.ModelAndView;
 public class StaticContainer {
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(StaticContainer.class);
-	
+
 	@GetMapping("/")
 	public ModelAndView getIndex(Model model) {
-		//new Database();
-		LOGGER.info("into Index Controller");
+		LOGGER.info("text");
 		return new ModelAndView("index");
 	}
 	
 	@GetMapping("/school-profile")
 	public ModelAndView getProfile(Model model) {
+		String msg = null;
+		try {
+			msg = StreamUtils.copyToString(new ClassPathResource("test.txt").getInputStream(), Charset.defaultCharset());
+			}catch(Exception ex) {
+	
+			}
+		
+		model.addAttribute("msg", msg);
 		return new ModelAndView("school-profile");
 	}
 	
@@ -80,6 +93,5 @@ public class StaticContainer {
 	public ModelAndView getCourse(Model model) {
 		return new ModelAndView("course-offered");
 	}
-
 
 }

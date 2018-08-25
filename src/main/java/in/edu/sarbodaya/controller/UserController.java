@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import in.edu.sarbodaya.beans.UserDetail;
+import in.edu.sarbodaya.dto.UserData;
 import in.edu.sarbodaya.services.UserService;
 
 @Controller
@@ -30,13 +31,13 @@ public class UserController {
 	@GetMapping("admin/register")
 	public ModelAndView getInde(Model model) {
 		logger.info("Register Page");
-		UserDetail user = new UserDetail();
+		UserData user = new UserData();
 		model.addAttribute("user", user);
 		return new ModelAndView("admin/register");
 	}
 
 	@PostMapping("admin/register")
-	public ModelAndView saveUser(@Valid UserDetail user, BindingResult result, ModelMap model,RedirectAttributes redir) {
+	public ModelAndView saveUser(@Valid UserData user, BindingResult result, ModelMap model,RedirectAttributes redir) {
 		//user.setPassword(encoder.encode(user.getPassword()));
 		logger.info("Preparing data to save");
 		userService.save(user);

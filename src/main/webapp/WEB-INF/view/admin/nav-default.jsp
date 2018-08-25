@@ -36,11 +36,6 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="nav navbar-nav navbar-right paddingRight">
-						<li class="nav-item"><a class="nav-link"
-							href="<c:url value='/admin/new' />">Client Registration</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="<c:url value='/admin/purchase' />">Purchase Entry</a></li>
-
 						<li class="nav-item dropdown"><a
 							class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Grade Management
 								<b class="caret"></b>
@@ -98,7 +93,7 @@
 										</ul>
 										</li>
 								<li class="nav-item"><a class="nav-link"
-									href="<c:url value='/login' />">Admin</a></li>
+									href="<c:url value='logout' />">Logout</a></li>
 								<li><a class="nav-link" href="https://aucoe.info/"
 									target="/_blank">Exams</a></li>
 								<li><a class="nav-link"
