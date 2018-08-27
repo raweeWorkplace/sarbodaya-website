@@ -20,7 +20,7 @@ import in.edu.sarbodaya.dto.UserData;
 import in.edu.sarbodaya.services.UserService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class UserController {
 
 	@Autowired
@@ -28,7 +28,7 @@ public class UserController {
 	
 	private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-	@GetMapping("admin/register")
+	@GetMapping("/register")
 	public ModelAndView getInde(Model model) {
 		logger.info("Register Page");
 		UserData user = new UserData();
@@ -36,7 +36,7 @@ public class UserController {
 		return new ModelAndView("admin/register");
 	}
 
-	@PostMapping("admin/register")
+	@PostMapping("/register")
 	public ModelAndView saveUser(@Valid UserData user, BindingResult result, ModelMap model,RedirectAttributes redir) {
 		//user.setPassword(encoder.encode(user.getPassword()));
 		logger.info("Preparing data to save");
@@ -46,14 +46,14 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("admin/login")
+	@GetMapping("/login")
 	public ModelAndView getLogInPage(Model model) {
 		UserDetail user = new UserDetail();
 		model.addAttribute("user", user);
 		return new ModelAndView("admin/login");
 	}
 
-	@PostMapping("admin/login")
+	@PostMapping("/login")
 	public ModelAndView verityUser(@Valid UserDetail user, BindingResult result, ModelMap model,RedirectAttributes redir) {
 		String password = user.getPassword();
 		UserDetail userVerify = userService.get(user.getEmail());
@@ -66,7 +66,7 @@ public class UserController {
 		}
 	}
 	
-	@GetMapping("admin/home")
+	@GetMapping("/home")
 	public ModelAndView getHomePage(Model model) {
 		return new ModelAndView("admin/userHome");
 	}

@@ -18,7 +18,7 @@
 
 <label>Purchase Id :</label> 	<input type="text" class="" name="purchase_id" id="purchase_id"/><br/>
 
-<label>Item Name:	</label>	<select id="selectItem" onchange="getItemId()">
+<label>Item Name:	</label><select id="selectItem" onchange="getItemId()">
 						<option selected="selected">Select Item</option>
 						<c:forEach items="${itemList}" var="item">							
 							<option value="${item.item_no}">${item.item_name } -- ${item.manufacturer}</option>						

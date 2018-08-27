@@ -68,7 +68,7 @@
 							class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Staff Management<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="coursesoff.html">Teacher Details Entry</a></li>
+								<li><a class="dropdown-item" href="<c:url value='/admin/register-teacher' />">Teacher Details Entry</a></li>
 								<li><a class="dropdown-item" href="calendar.html">Academic
 										Calender</a></li>
 								<li><a class="dropdown-item" href="ugsemestersyllabus.html">Fees
