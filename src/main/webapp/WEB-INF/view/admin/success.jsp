@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Refresh" content="3; url=/photon/new">
+<meta http-equiv="Refresh" content="0.1; url=register-teacher">
 <title>Redirecting</title>
 </head>
 <body>

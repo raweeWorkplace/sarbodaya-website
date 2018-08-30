@@ -45,9 +45,4 @@ public class UserService {
 			throw new UserNotFoundException("No User Found with given email:" +email+"");		
 		}
 	}
-	
-//	@Transactional(readOnly=true)
-//    private boolean emailExist(final String email) {
-//        return dao.get(email) != null;
-//    }
 }

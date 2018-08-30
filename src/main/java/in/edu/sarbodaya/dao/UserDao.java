@@ -3,12 +3,10 @@ package in.edu.sarbodaya.dao;
 import java.util.List;
 
 import javax.persistence.Query;
-
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import in.edu.sarbodaya.AppConfig;
 import in.edu.sarbodaya.beans.UserDetail;
 
 @Repository
@@ -30,7 +28,7 @@ public class UserDao {
 	}
     public boolean emailExist(String email){
         Query query = sessionFactory.getCurrentSession().createQuery("from UserDetail u where u.Email = '"+email+"'");
-        List<UserDetail> cl_list = query.getResultList();
+        List<?> cl_list = query.getResultList();
             return !cl_list.isEmpty();
         }
 }

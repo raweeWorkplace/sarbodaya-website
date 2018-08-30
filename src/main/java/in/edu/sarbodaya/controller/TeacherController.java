@@ -35,11 +35,11 @@ public class TeacherController {
 	}
 	
 	@PostMapping("/register-teacher")
-	public ModelAndView saveUser(@Valid TeacherDetailDto teacher, BindingResult result, ModelMap model,RedirectAttributes redir) {
+	public ModelAndView saveUser(@Valid TeacherDetailDto teacherDto, BindingResult result, ModelMap model,RedirectAttributes redir) {
 		//user.setPassword(encoder.encode(user.getPassword()));
 		logger.info("Preparing data to save");
-		service.save(teacher);
+		service.save(teacherDto);
 		logger.info("Data Saved");
-		return new ModelAndView("admin/register-teacher");
+		return new ModelAndView("admin/success");
 	}
 }
