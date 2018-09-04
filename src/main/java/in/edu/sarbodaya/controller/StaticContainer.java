@@ -1,11 +1,11 @@
 package in.edu.sarbodaya.controller;
 
 import java.nio.charset.Charset;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +14,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import in.edu.sarbodaya.services.TeacherService;
+
 @Controller
 @RequestMapping("/")
 public class StaticContainer {
+	
+	@Autowired
+	TeacherService teacherService;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(StaticContainer.class);
 
@@ -66,6 +71,9 @@ public class StaticContainer {
 	
 	@GetMapping("/teacher-profile")
 	public ModelAndView getTeacher(Model model) {
+		List<?> teacher = teacherService.getAllTeacherDetails();
+		model.addAttribute("teacher_profile_list", teacher);
+		
 		return new ModelAndView("teacher-profile");
 	}
 	

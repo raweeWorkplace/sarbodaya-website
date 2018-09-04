@@ -19,7 +19,7 @@ public class TeacherDao {
 		sessionFactory.getCurrentSession().save(teacher);
 	}
 	
-	public List<?> getAllTeacherDetails(){
-		return (List<?>) sessionFactory.getCurrentSession().createQuery("from TeacherDetail").getResultList();
+	public List<TeacherDetail> getAllTeacherDetails(){
+		return (List<TeacherDetail>) sessionFactory.getCurrentSession().createQuery("from TeacherDetail").getResultList();
 	}
 }

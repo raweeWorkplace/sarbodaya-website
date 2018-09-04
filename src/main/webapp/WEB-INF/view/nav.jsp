@@ -50,11 +50,13 @@
 							class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Administration<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href='<c:url value = "/principal-desk"/>'>Principal
-										Desk</a></li>
+							<li><a class="dropdown-item" href='<c:url value = "/principal-desk"/>'>Director Message</a></li>
+								<li><a class="dropdown-item" href='<c:url value = "/principal-desk"/>'>Principal Message</a></li>
 								<li><a class="dropdown-item" href='<c:url value = "/teacher-profile"/>'>Teachers
 										Profile</a></li>
 							</ul></li>
+							
+							
 						<li class=" nav-item dropdown"><a
 							class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics<b
 								class="caret"></b></a>
@@ -73,26 +75,41 @@
 								<li><a class="dropdown-item" href='<c:url value = "/admission"/>'>Admission
 										Procedure</a></li>
 							</ul></li>
+							
+							
+							
 						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Building
-								& Hostels<b class="caret"></b>
+							class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Infrastructure<b class="caret"></b>
 						</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href='<c:url value = "/school-building"/>'>School
-										Building</a></li>
-								<li><a class="dropdown-item" href='<c:url value = "/school-hostel"/>'>School
-										Hostel</a></li>
+								<li><a class="dropdown-item" href='<c:url value = "/school-building"/>'>Building and Hostel
+										</a></li>
+								<li><a class="dropdown-item" href='<c:url value = "/school-hostel"/>'>Academics Facilities
+										</a></li>
+										<li><a class="dropdown-item" href='<c:url value = "/school-hostel"/>'>Sports Facilities
+										</a></li>
+										<li><a class="dropdown-item" href='<c:url value = "/school-hostel"/>'>Transport Facilities
+										</a></li>
 										</ul>
 										</li>
+										
+							<li class ="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle = "dropdown" href = "#">Contact Us<b class ="caret"></b></a>
+								<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href= "#">Feedback</a></li>
+								<li><a class ="dropdown-item"  href= "#">Careers</a></li>
+								
+								
+								</ul>
+								</li>
+										
 								<li class="nav-item"><a class="nav-link"
 									href="<c:url value='admin/login' />">Admin</a></li>
-								<li><a class="nav-link" href="https://aucoe.info/"
-									target="/_blank">Exams</a></li>
-								<li><a class="nav-link"
-									href="https://aucoe.info/RDA/resultsnew/" target="/_blank">Results</a></li>
-							</ul>
-							
-						
+								<li><a class="nav-link" href="#"
+									target="/_blank">Results</a></li>
+									
+								</ul>
+								
+
 				</div>
 			</div>
 		</nav>

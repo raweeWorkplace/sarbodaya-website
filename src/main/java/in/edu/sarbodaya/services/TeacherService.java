@@ -39,6 +39,6 @@ public class TeacherService {
 	}
 	@Transactional
 	public List<?> getAllTeacherDetails() {
-		return (List<?>) dao.getAllTeacherDetails();
+		return (List<TeacherDetail>) dao.getAllTeacherDetails();
 	}
 }
